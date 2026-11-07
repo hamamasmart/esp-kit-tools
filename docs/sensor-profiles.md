@@ -2,7 +2,7 @@
 
 How to read and update (reprogram) the **slave address** (and baud rate) of each RS485 sensor
 family used by the fleet, over Modbus-RTU. This is the knowledge the configurator firmware encodes;
-the per-model wire profiles live in `src/profiles.rs`.
+the per-model wire profiles live in `modbus-configurator/src/profiles.rs`.
 
 All sensors are Modbus-RTU slaves on RS485, configured through **holding registers**:
 

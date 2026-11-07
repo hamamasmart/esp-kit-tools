@@ -124,7 +124,7 @@ fn validate_endpoint(
         ));
     }
     // Baud-rate support is model-dependent: code-index families take 2400/4800/9600, while the
-    // soil multi-parameter family takes 1200..=38400 (see `docs/sensor-profiles.md`).
+    // soil multi-parameter family takes 1200..=38400 (see `../docs/sensor-profiles.md`).
     let supported: &[u32] = match sensor {
         TomlSensorType::SoilMultiParameter => &[1200, 2400, 4800, 9600, 19200, 38400],
         _ => &[2400, 4800, 9600],

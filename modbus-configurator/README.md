@@ -18,7 +18,7 @@ This repository is self-contained (ESP32-S3 only): the Modbus master driver is i
 The first two encode the baud rate as a code (`0 = 2400`, `1 = 4800`, `2 = 9600`); the soil
 multi-parameter family (temp/moisture/EC/NPK/pH, 7-in-1) encodes it as baud÷10 packed as hex
 digits and only accepts configuration writes via function code `0x10`. Full register maps, wire
-examples, and measurement-conversion knowledge: [`docs/sensor-profiles.md`](docs/sensor-profiles.md).
+examples, and measurement-conversion knowledge: [`docs/sensor-profiles.md`](../docs/sensor-profiles.md).
 
 ## How It Works
 

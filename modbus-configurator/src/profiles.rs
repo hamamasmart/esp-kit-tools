@@ -2,7 +2,7 @@
 //!
 //! All supported sensor families store their slave address and baud rate in holding registers,
 //! but they differ in *which* registers those are, how the baud rate is encoded, and which write
-//! function code they accept — captured by [`SensorProfile`]. See `docs/sensor-profiles.md` for
+//! function code they accept — captured by [`SensorProfile`]. See `../docs/sensor-profiles.md` for
 //! the full register maps and wire examples.
 
 /// A configurable RS485 sensor model.
