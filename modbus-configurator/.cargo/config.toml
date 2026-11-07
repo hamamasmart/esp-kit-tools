@@ -1,0 +1,19 @@
+# ESP32-S3 build configuration.
+#
+# The configurator targets the Waveshare ESP32-S3-Relay-6CH (Xtensa, not RISC-V), so the
+# Espressif `esp` toolchain is required: `export RUSTUP_TOOLCHAIN=esp` before building.
+# `linkall.x` provides the ESP32-S3 linker script; do NOT add `-Trom-functions.x`.
+[target.xtensa-esp32s3-none-elf]
+runner = "espflash flash --monitor"
+rustflags = [
+  "-C", "link-arg=-Tlinkall.x",
+]
+
+[build]
+target = "xtensa-esp32s3-none-elf"
+
+[unstable]
+build-std = ["core", "alloc"]
+
+[env]
+ESP_LOG = "info"
